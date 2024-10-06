@@ -14,6 +14,8 @@ import gulpSass from 'gulp-sass';
 
 import BrowserSync from 'browser-sync';
 
+import ghPages from 'gulp-gh-pages';
+
 const sass = gulpSass(dartSass);
 const browserSync = BrowserSync.create();
 
@@ -100,6 +102,11 @@ function watch() {
 const build = gulp.series(clean, pug, gulp.parallel(scripts, styles));
 const dev = gulp.series(clean, pug, gulp.parallel(scripts, styles), watch);
 
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+
 export {
     clean,
     styles,
@@ -107,7 +114,8 @@ export {
     pug,
     watch,
     build,
-    dev
+    dev,
 } ;
 
-export default dev;
+export default build;
+
