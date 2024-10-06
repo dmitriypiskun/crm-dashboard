@@ -97,7 +97,8 @@ function watch() {
     gulp.watch(paths.scripts.src, scripts);
 }
 
-const build = gulp.series(clean, pug, gulp.parallel(scripts, styles), watch);
+const build = gulp.series(clean, pug, gulp.parallel(scripts, styles));
+const dev = gulp.series(clean, pug, gulp.parallel(scripts, styles), watch);
 
 export {
     clean,
@@ -106,6 +107,7 @@ export {
     pug,
     watch,
     build,
+    dev
 } ;
 
-export default build;
+export default dev;
