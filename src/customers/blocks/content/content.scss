@@ -1,0 +1,22 @@
+@import '../../common/styles/mixins.scss';
+@import '../../common/styles/variables.scss';
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 95px 71px 71px;
+  width: 100%;
+  overflow: auto;
+
+  &__header {
+    @include typography(24px);
+
+    line-height: 36px;
+    margin-top: 41px;
+    color: $text-primary;
+  }
+
+  &__card {
+    margin-top: 51px;
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../common/styles/variables.scss';
+@import '../../common/styles/mixins.scss';
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px;
+  gap: 8px;
+
+  &__label {
+    @include typography(14px, 500, 'Poppins Medium');
+    color: $text-secondary;
+    width: 100%;
+  }
+}

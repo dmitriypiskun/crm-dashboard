@@ -1,0 +1,14 @@
+@import './fonts.scss';
+@import './mixins.scss';
+@import './variables.scss';
+
+.body {
+  @include typography(12px, 400);
+
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: $background;
+}

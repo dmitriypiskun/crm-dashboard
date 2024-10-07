@@ -1,0 +1,32 @@
+@import '../../common/styles/variables.scss';
+@import '../../common/styles/mixins.scss';
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 12px;
+
+  &__item {
+    @include typography(12px, 500, 'Poppins Medium');
+
+    line-height: 12px;
+    box-sizing: border-box;
+    border: 1px solid #eeeeee;
+    color: #404b52;
+    border-radius: 4px;
+    padding: 6px 9px;
+    transition: $duration;
+    cursor: pointer;
+
+    &--active {
+      color: $white;
+      background-color: $primary;
+      border-color: $primary;
+    }
+
+    &:hover {
+      border-color: $primary;
+    }
+  }
+}

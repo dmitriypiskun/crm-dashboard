@@ -1,0 +1,15 @@
+@import '../../common/styles/mixins.scss';
+@import '../../common/styles/variables.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 30px;
+  box-shadow: 0px 10px 60px 0px #e2ecf980;
+
+  &__body {
+    display: flex;
+    flex-direction: row;
+  }
+}

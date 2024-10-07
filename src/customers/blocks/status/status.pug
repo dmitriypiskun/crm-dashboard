@@ -1,0 +1,3 @@
+mixin status(text, isActive=false)
+    div(class='status ' + (isActive ? 'status--active' : 'status--danger'))
+        span.status_title= text

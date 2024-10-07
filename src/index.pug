@@ -1,9 +1,8 @@
-doctype html
-html(lang="en")
-    head
-        title Dashboard customers
-        link(rel="stylesheet", type="text/css" href="css/main.min.css") 
-    body
-        h1 This is text
+extends ./layout.pug
+block variables 
+    - var title = "Dashboard"
+    - var version = "01"
 
-        script(src="js/main.min.js")
+block content
+    include customers/blocks/menu/menu.pug
+    include customers/blocks/content/content.pug

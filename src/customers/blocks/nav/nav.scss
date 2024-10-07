@@ -1,0 +1,38 @@
+@import '../../common/styles/variables.scss';
+@import '../../common/styles/mixins.scss';
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 46px;
+    padding: 0px 8px;
+    gap: 8px;
+    border: 1px solid $white;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $text-secondary;
+    transition: $duration;
+
+    &--active {
+      background-color: $primary;
+      color: $white;
+    }
+
+    &:hover {
+      border: 1px solid $primary;
+    }
+  }
+
+  &__title {
+    @include typography(14px);
+    width: 100%;
+  }
+}

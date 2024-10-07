@@ -1,0 +1,41 @@
+@import '../../common/styles/variables.scss';
+@import '../../common/styles/mixins.scss';
+
+.search-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px 8px;
+  background-color: #f9fbff;
+  border-radius: 10px;
+  border: 1px solid #f9fbff;
+  height: 36px;
+  gap: 8px;
+  transition: $duration;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    color: #7e7e7e;
+  }
+
+  &__input {
+    @include typography(12px, 400);
+
+    outline: none;
+    border: none;
+
+    width: 100%;
+    background-color: inherit;
+    color: $text-primary;
+
+    &::placeholder {
+      color: #b5b7c0;
+    }
+  }
+
+  &:has(&__input:focus) {
+    border: 1px solid $primary;
+  }
+}

@@ -1,0 +1,6 @@
+@mixin typography($fontSize, $fontWeight: 400, $fontFamily: 'Poppins Regular') {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: normal;
+  font-weight: $fontWeight;
+}

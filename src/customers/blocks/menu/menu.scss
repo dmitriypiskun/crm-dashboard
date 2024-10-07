@@ -1,0 +1,47 @@
+@import '../../common/styles/mixins.scss';
+@import '../../common/styles/variables.scss';
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
+  height: 100%;
+  width: 306px;
+  padding: 36px 28px 76px;
+  box-sizing: border-box;
+  background-color: $white;
+  box-shadow: 0px 10px 60px 0px #e2ecf980;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  &__title {
+    @include typography(26px, 600, 'Poppins SemiBold');
+    line-height: 39px;
+    color: $text-primary;
+  }
+
+  &__subtitle {
+    @include typography(10px);
+    color: $text-secondary;
+    margin-top: 10px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 53px;
+    height: 100%;
+  }
+}

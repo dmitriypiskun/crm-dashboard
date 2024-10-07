@@ -1,0 +1,29 @@
+@import '../../common/styles/variables.scss';
+@import '../../common/styles/mixins.scss';
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include typography(22px, 600, 'Poppins SemiBold');
+    line-height: 33px;
+    color: $text-primary;
+  }
+
+  &__subtitle {
+    @include typography(14px);
+    color: $text-success;
+  }
+
+  &__search {
+  }
+}

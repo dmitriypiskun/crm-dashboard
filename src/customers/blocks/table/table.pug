@@ -1,0 +1,33 @@
+include ../status/status.pug
+-
+    var data = [
+        {customerName: "Jane Cooper", company: 'Microsoft', phoneNumber: '(225) 555-0118', email: 'jane@microsoft.com', country: 'United States', isActive: true},
+        {customerName: "Floyd Miles", company: 'Yahoo', phoneNumber: '(205) 555-0100', email: 'floyd@yahoo.com', country: 'Kiribati', isActive: false},
+        {customerName: "Ronald Richards", company: 'Adobe', phoneNumber: '(302) 555-0107', email: 'ronald@adobe.com', country: 'Israel', isActive: false},
+        {customerName: "Marvin McKinney", company: 'Tesla', phoneNumber: '(252) 555-0126', email: 'marvin@tesla.com', country: 'Iran', isActive: true},
+        {customerName: "Jerome Bell", company: 'Google', phoneNumber: '(629) 555-0129', email: 'jerome@google.com', country: 'Réunion', isActive: true},
+        {customerName: "Kathryn Murphy", company: 'Microsoft', phoneNumber: '(406) 555-0120', email: 'kathryn@microsoft.com', country: 'Curaçao', isActive: true},
+        {customerName: "Jacob Jones", company: 'Yahoo', phoneNumber: '(208) 555-0112', email: 'jacob@yahoo.com', country: 'Brazil', isActive: true},
+        {customerName: "Kristin Watson", company: 'Facebook', phoneNumber: '(704) 555-0127', email: 'kristin@facebook.com', country: 'Åland Islands', isActive: false},
+    ]
+
+table.table 
+    thead.table__head
+        tr.table__row
+            th.table__head-cell Customer Name
+            th.table__head-cell Company
+            th.table__head-cell Phone number
+            th.table__head-cell Email
+            th.table__head-cell Country
+            th.table__head-cell Status
+
+    tbody.table__body
+        each item in data
+            tr.table__row
+                td.table__cell= item.customerName
+                td.table__cell= item.company
+                td.table__cell= item.phoneNumber
+                td.table__cell= item.email
+                td.table__cell= item.country
+                td.table__cell
+                    +status(item.isActive ? "Active" : "Inactive", item.isActive)

@@ -1,0 +1,26 @@
+@import '../../common/styles/variables.scss';
+@import '../../common/styles/mixins.scss';
+
+.status {
+  border-radius: 4px;
+  padding: 4px 12px;
+  min-width: 80px;
+  width: fit-content;
+  text-align: center;
+
+  &__title {
+    @include typography(14px, 500, 'Poppins Medium');
+  }
+
+  &--active {
+    background: #16c09861;
+    border: 1px solid #00b087;
+    color: #008767;
+  }
+
+  &--danger {
+    background: #ffc5c5;
+    color: #df0404;
+    border: 1px solid #df0404;
+  }
+}

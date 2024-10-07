@@ -1,0 +1,12 @@
+mixin paginationItem(text, isActive = false)
+    button(class="pagination__item " + (isActive ? "pagination__item--active" : ''))= text
+
+.pagination
+    button.pagination__item &lsaquo;
+    +paginationItem("1", true)
+    +paginationItem("2")
+    +paginationItem("3")
+    +paginationItem("4")
+    span ...
+    +paginationItem("40")
+    button.pagination__item &rsaquo;

@@ -1,0 +1,14 @@
+mixin navItem(text, link, url, isActive = false, isGo = false)
+    a(href=link, class="nav__item " + (isActive ? 'nav__item--active' : ''))
+        img.icon(src=url alt="#{text} icon")
+        span.nav__title= text
+        if isGo 
+            img.icon(src="/assets/images/chevron-right.svg" alt="Go icon")
+
+nav.nav 
+    +navItem("Dashboard", "#", "/assets/images/key-square.svg")
+    +navItem("Product", "#", "/assets/images/3d-square.svg", false, true)
+    +navItem("Customers", "#", "/assets/images/user-square.svg", true, true)
+    +navItem("Income", "#", "/assets/images/wallet-money.svg", false, true)
+    +navItem("Promote", "#", "/assets/images/discount-shape.svg", false, true)
+    +navItem("Help", "#", "/assets/images/message-question.svg", false, true)
