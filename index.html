@@ -9,7 +9,10 @@
   </head>
   <body class="body">
     <aside class="menu">
-      <div class="menu__header"> <img class="menu__icon" src="assets/images/setting.svg" alt="Logo"><span class="menu__title">Dashboard</span><span class="menu__subtitle">v.01</span></div>
+      <div class="menu__header">
+        <div class="menu__title-wrapper"><img class="menu__icon" src="assets/images/setting.svg" alt="Logo"><span class="menu__title">Dashboard</span><span class="menu__subtitle">v.01</span></div>
+        <button class="menu__button" onclick="toggleMenu();"><img src="assets/images/close.svg" alt="Menu icon" width="24px" height="24px"></button>
+      </div>
       <div class="menu__nav">
         <nav class="nav"> <a class="nav__item " href="#"><img class="icon" src="assets/images/key-square.svg" alt="#{text} icon"><span class="nav__title">Dashboard</span></a><a class="nav__item " href="#"><img class="icon" src="assets/images/3d-square.svg" alt="#{text} icon"><span class="nav__title">Product</span><img class="icon" src="assets/images/chevron-right.svg" alt="Go icon"></a><a class="nav__item nav__item--active" href="#"><img class="icon" src="assets/images/user-square.svg" alt="#{text} icon"><span class="nav__title">Customers</span><img class="icon" src="assets/images/chevron-right.svg" alt="Go icon"></a><a class="nav__item " href="#"><img class="icon" src="assets/images/wallet-money.svg" alt="#{text} icon"><span class="nav__title">Income</span><img class="icon" src="assets/images/chevron-right.svg" alt="Go icon"></a><a class="nav__item " href="#"><img class="icon" src="assets/images/discount-shape.svg" alt="#{text} icon"><span class="nav__title">Promote</span><img class="icon" src="assets/images/chevron-right.svg" alt="Go icon"></a><a class="nav__item " href="#"><img class="icon" src="assets/images/message-question.svg" alt="#{text} icon"><span class="nav__title">Help</span><img class="icon" src="assets/images/chevron-right.svg" alt="Go icon"></a>
         </nav>
@@ -19,7 +22,9 @@
       </div>
     </aside>
     <main class="content">
-      <div class="content__header">Hello Evano 👋🏼</div>
+      <div class="content__header">
+        <button class="content__menu-button" id="menu-button" onclick="toggleMenu();"><img src="assets/images/menu.svg" alt="Menu icon" width="24px" height="24px"></button><span>Hello Evano 👋🏼</span>
+      </div>
       <div class="content__card"> 
         <div class="card">
           <div class="card-header"> 
@@ -140,5 +145,6 @@
         </div>
       </div>
     </main>
+    <script src="js/main.min.js" type="text/javascript"></script>
   </body>
 </html>
