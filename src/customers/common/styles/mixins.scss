@@ -4,3 +4,9 @@
   line-height: normal;
   font-weight: $fontWeight;
 }
+
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}

@@ -7,6 +7,7 @@
   background-color: $white;
   border-radius: 30px;
   box-shadow: 0px 10px 60px 0px #e2ecf980;
+  min-width: fit-content;
 
   &__body {
     display: flex;

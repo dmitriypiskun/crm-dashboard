@@ -1,4 +1,7 @@
 main.content
-    .content__header= "Hello Evano 👋🏼"
+    .content__header
+        button#menu-button.content__menu-button(onclick="toggleMenu();")
+            img(src="assets/images/menu.svg" alt="Menu icon" width='24px' height="24px")
+        span= "Hello Evano 👋🏼"
     .content__card 
         include ../card/card.pug

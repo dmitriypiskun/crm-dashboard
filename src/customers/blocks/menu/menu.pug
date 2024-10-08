@@ -1,8 +1,11 @@
 aside.menu
-    .menu__header 
-        img.menu__icon(src="assets/images/setting.svg" alt="Logo")
-        span.menu__title= title
-        span.menu__subtitle=  "v." + version 
+    .menu__header
+        .menu__title-wrapper
+            img.menu__icon(src="assets/images/setting.svg" alt="Logo")
+            span.menu__title= title
+            span.menu__subtitle=  "v." + version
+        button.menu__button(onclick="toggleMenu();")
+            img(src="assets/images/close.svg" alt="Menu icon" width='24px' height="24px")
 
     .menu__nav
         include ../nav/nav.pug
