@@ -27,7 +27,7 @@
   }
 
   &__title {
-    @include typography(26px, 600, 'Poppins SemiBold');
+    @include typography(26px, 600);
     line-height: 39px;
     color: $text-primary;
   }

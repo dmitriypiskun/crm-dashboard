@@ -10,7 +10,7 @@
   gap: 8px;
 
   &__label {
-    @include typography(14px, 500, 'Poppins Medium');
+    @include typography(14px, 500);
     color: $text-secondary;
     width: 100%;
   }

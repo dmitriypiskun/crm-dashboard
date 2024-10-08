@@ -4,8 +4,10 @@ doctype html
 html(lang="en")
     head
         title #{title}
-        link(rel="stylesheet" type="text/css" href="css/main.min.css") 
+
+        link(rel="preconnect" href="https://fonts.googleapis.com") 
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin) 
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" crossorigin)
+        link(rel="stylesheet" type="text/css" href="css/main.min.css")
     body.body
         block content
-
-        script(src="js/main.min.js" type="text/javascript")

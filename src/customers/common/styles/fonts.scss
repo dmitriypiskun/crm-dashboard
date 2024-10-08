@@ -1,17 +1,17 @@
-@font-face {
-  font-family: 'Poppins Regular';
+.poppins-regular {
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  src: url('../assets/fonts/Poppins-Regular.woff') format('woff');
+  font-style: normal;
 }
 
-@font-face {
-  font-family: 'Poppins Medium';
+.poppins-medium {
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  src: url('../assets/fonts/Poppins-Medium.woff') format('woff');
+  font-style: normal;
 }
 
-@font-face {
-  font-family: 'Poppins SemiBold';
+.poppins-semibold {
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  src: url('../assets/fonts/Poppins-SemiBold.woff') format('woff');
+  font-style: normal;
 }

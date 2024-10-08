@@ -35,7 +35,7 @@
   }
 
   &__head-cell {
-    @include typography(14px, 500, 'Poppins Medium');
+    @include typography(14px, 500);
     line-height: 21px;
     text-align: start;
     color: $text-secondary;
@@ -48,7 +48,7 @@
   }
 
   &__cell {
-    @include typography(14px, 500, 'Poppins Medium');
+    @include typography(14px, 500);
     line-height: 21px;
     text-align: start;
     color: #292d32;
