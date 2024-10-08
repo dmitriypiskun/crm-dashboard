@@ -25,7 +25,7 @@ const paths = {
     dest: 'dist/',
   },
   pug: {
-    src: 'src/**/*.pug',
+    src: 'src/index.pug',
     dest: 'dist/',
   },
   styles: {
