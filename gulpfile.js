@@ -94,7 +94,11 @@ function pug() {
 }
 
 function assets() {
-  return gulp.src(paths.assets.src, { encoding: false }).pipe(gulp.dest(paths.assets.dest));
+  return gulp
+    .src(paths.assets.src, {
+      encoding: false,
+    })
+    .pipe(gulp.dest(paths.assets.dest));
 }
 
 function clean() {
@@ -118,7 +122,11 @@ const build = gulp.series(clean, pug, gulp.parallel(scripts, styles, assets));
 const dev = gulp.series(clean, pug, gulp.parallel(scripts, styles, assets), watch);
 
 gulp.task('deploy', function () {
-  return gulp.src('./dist/**/*').pipe(ghPages());
+  return gulp
+    .src('./dist/**/*', {
+      encoding: false,
+    })
+    .pipe(ghPages());
 });
 
 export { clean, styles, scripts, pug, watch, build, dev };
